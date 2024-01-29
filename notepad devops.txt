@@ -1,0 +1,16 @@
+curl -fsSL https://get.docker.com -o install-docker.sh
+
+
+sh install-docker.sh
+
+sudo docker info
+
+sudo usermod -aG docker <user-name>
+# exit
+# relogin
+
+To create a container and login into container during start
+* docker container run -d -P --name mycontainer -it httpd /bin/bash
+
+To login into running container
+*docker container exec -it <name/id> /bin/bash
